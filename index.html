@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Agamar - poligrafia dla firm i kancelarii, Warszawa (podgląd)</title>
+<meta name="description" content="Agamar Marek Przybyłowicz - wizytówki, teczki firmowe i teczki do akt, koperty, notatniki, tabliczki, broszury. Projekt i dostawa w cenie. Warszawa, ul. Żelazna 74/2.">
+<meta name="theme-color" content="#17283A">
+<link rel="preload" href="fonts/montserrat-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/webp" href="img/pakiet-tel-640.webp" media="(max-width:700px)" imagesrcset="img/pakiet-tel-480.webp 480w, img/pakiet-tel-640.webp 640w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(min-width:701px)" imagesrcset="img/pakiet-1024.webp 1024w, img/pakiet-1500.webp 1500w" imagesizes="100vw" fetchpriority="high">
+<style>
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:500 700;font-display:swap;src:url(fonts/montserrat-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:500 700;font-display:swap;src:url(fonts/montserrat-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/manrope-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/manrope-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--graf:#1E2226;--niebo:#2F5476;--noc:#17283A;--szary:#EEF1F4;--linia:#D5DCE3;--tekst:#3A4149;--w:1240px;--pad:clamp(16px,4vw,40px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--tekst);font:400 17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;color:var(--graf);font-weight:700;line-height:1.15;margin:0;letter-spacing:-.01em}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 var(--pad)}
+@media (min-width:1800px){:root{--w:1560px}body{font-size:18px}}
+@media (min-width:2300px){:root{--w:1840px}}
+/* znak warstw z logo */
+.warstwy{display:inline-block;width:34px;height:30px;flex:none;color:var(--niebo)}
+.warstwy path{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linejoin:miter}
+/* naglowek */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .25s ease,box-shadow .25s ease,color .25s ease;color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.top.ciemny{background:#fff;color:var(--graf);box-shadow:0 1px 0 var(--linia)}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo svg{width:34px;height:31px}
+.logo svg path{fill:none;stroke:currentColor;stroke-width:3;stroke-linejoin:miter}
+.top.ciemny .logo svg{color:var(--niebo)}
+.logo b{font:600 21px/1 Montserrat,sans-serif;letter-spacing:.18em}
+.logo small{display:block;font:500 10px/1 Montserrat,sans-serif;letter-spacing:.32em;margin-top:5px;opacity:.85}
+.menu{display:flex;align-items:center;gap:30px;font:600 15px/1 Montserrat,sans-serif}
+.menu a{text-decoration:none;padding:10px 0}
+.menu a:hover{opacity:.75}
+.menu .tel{border:1.5px solid currentColor;padding:12px 18px;border-radius:2px}
+.burger{display:none;background:none;border:0;color:inherit;width:48px;height:48px;margin-right:-10px;cursor:pointer}
+.burger span,.burger span:before,.burger span:after{display:block;width:24px;height:2px;background:currentColor;margin:0 auto;position:relative;transition:transform .2s}
+.burger span:before,.burger span:after{content:"";position:absolute;left:0}
+.burger span:before{top:-7px}.burger span:after{top:7px}
+@media (max-width:900px){
+ .burger{display:block}
+ .menu{position:fixed;inset:72px 0 auto 0;background:#fff;color:var(--graf);flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 22px;box-shadow:0 12px 30px rgba(23,40,58,.18);display:none}
+ .menu.otwarte{display:flex}
+ .menu a{padding:16px 0;border-bottom:1px solid var(--linia);font-size:17px}
+ .menu .tel{margin-top:16px;text-align:center;border:0;background:var(--niebo);color:#fff;padding:16px}
+ .top.menu-on{background:#fff;color:var(--graf)}
+ .top.menu-on .logo svg{color:var(--niebo)}
+}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:var(--noc)}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero picture img{object-position:50% 50%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,27,38,.55) 0,rgba(17,27,38,.05) 24%,rgba(17,27,38,.25) 48%,rgba(17,27,38,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:110px;padding-bottom:clamp(34px,7vh,80px)}
+.hero h1{color:#fff;font-size:clamp(28px,3.7vw,56px);max-width:19ch;text-shadow:0 2px 24px rgba(10,18,27,.35)}
+.hero p.lead{font-size:clamp(17px,1.5vw,20px);max-width:44ch;margin:18px 0 0;color:#E6ECF2}
+.hero .akcje{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:14px;background:#fff;color:var(--noc);text-decoration:none;font:700 17px/1 Montserrat,sans-serif;padding:19px 24px;border-radius:2px;min-height:56px}
+.btn svg{width:20px;height:18px}
+.btn svg{color:var(--niebo)}
+.btn:hover{background:#E6ECF2}
+.hero .adres{font-size:15px;color:#D4DDE6}
+@media (min-width:901px){.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(17,27,38,.78) 0,rgba(17,27,38,.45) 42%,rgba(17,27,38,0) 70%)}}
+@media (min-width:1100px){.hero .wrap{padding-bottom:90px}}
+/* separator warstw */
+.sep{display:flex;justify-content:center;padding:0}
+.sep svg{width:120px;height:26px;color:var(--linia)}
+.sep path{fill:none;stroke:currentColor;stroke-width:1.6}
+section{padding:clamp(64px,9vw,120px) 0}
+.naglowek{display:flex;align-items:flex-start;gap:16px;margin-bottom:26px}
+.naglowek h2{font-size:clamp(27px,3.1vw,42px);padding-top:2px}
+.naglowek .warstwy{margin-top:4px}
+/* kim */
+.kim .siatka{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,90px);align-items:center}
+.kim p{margin:0 0 16px;max-width:60ch}
+.kim .podpis{font:600 16px/1.4 Montserrat,sans-serif;color:var(--graf);margin-top:26px}
+.kim .podpis span{display:block;font:400 15px Manrope,sans-serif;color:var(--tekst);margin-top:4px}
+.kim figure{margin:0;position:relative}
+.kim figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.kim figcaption{font-size:14px;color:#5D6773;margin-top:12px}
+.rogi{position:relative}
+.rogi:before{content:"";position:absolute;right:-14px;top:-14px;width:46px;height:46px;border-top:2px solid var(--niebo);border-right:2px solid var(--niebo);box-shadow:5px -5px 0 -3px #fff,7px -7px 0 -3px var(--niebo);pointer-events:none}
+@media (max-width:860px){.kim .siatka{grid-template-columns:1fr}.rogi:before{right:-6px;top:-10px}}
+/* co */
+.co{background:var(--szary)}
+.co .siatka{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,90px)}
+.co .opis p{margin:0 0 14px;max-width:46ch}
+.lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.lista li{display:flex;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--linia);font:600 17px/1.35 Montserrat,sans-serif;color:var(--graf)}
+.lista li svg{width:18px;height:15px;flex:none;color:var(--niebo);transform:translateY(1px)}
+.lista li svg path{fill:none;stroke:currentColor;stroke-width:2.2}
+.lista li small{display:block;font:400 15px/1.45 Manrope,sans-serif;color:var(--tekst);margin-top:4px}
+@media (min-width:1800px){.lista{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:860px){.co .siatka{grid-template-columns:1fr}}
+@media (max-width:560px){.lista{grid-template-columns:1fr}}
+/* realizacje */
+.real .gora{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:26px}
+.real .gora .naglowek{margin:0}
+.real .gora p{margin:10px 0 0 50px;max-width:56ch}
+.strz{display:flex;gap:10px}
+.strz button{width:52px;height:52px;border:1.5px solid var(--graf);background:#fff;color:var(--graf);border-radius:2px;cursor:pointer;display:grid;place-items:center}
+.strz button:hover{background:var(--graf);color:#fff}
+.strz svg{width:20px;height:16px}.strz path{fill:none;stroke:currentColor;stroke-width:2}
+.tor{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 2*22px)/3);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;padding-bottom:4px;overscroll-behavior-x:contain}
+.tor::-webkit-scrollbar{display:none}
+.tor.ciag{cursor:grabbing;scroll-snap-type:none}
+.tor.ciag *{pointer-events:none}
+.karta{scroll-snap-align:start;margin:0;background:var(--szary);user-select:none}
+.karta button{all:unset;display:block;cursor:zoom-in;width:100%}
+.karta button:focus-visible{outline:3px solid var(--niebo);outline-offset:2px}
+.karta img{width:100%;aspect-ratio:1.36/1;object-fit:cover;-webkit-user-drag:none}
+.karta figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 18px;background:#fff;border:1px solid var(--linia);border-top:0;font:600 16px/1.3 Montserrat,sans-serif;color:var(--graf)}
+.karta figcaption span{font:400 14px Manrope,sans-serif;color:#5D6773}
+@media (min-width:1800px){.tor{grid-auto-columns:calc((100% - 3*22px)/4)}}
+@media (max-width:1000px){.tor{grid-auto-columns:calc((100% - 22px)/2)}}
+@media (max-width:620px){.tor{grid-auto-columns:86%;gap:14px}.real .gora p{margin-left:0}.strz{display:none}}
+.pasek{height:3px;background:var(--linia);margin-top:18px;position:relative}
+.pasek i{position:absolute;left:0;top:0;bottom:0;background:var(--niebo);width:30%;transition:left .15s linear}
+/* jak */
+.jak{background:var(--noc);color:#C9D4DF}
+.jak h2{color:#fff}
+.jak .warstwy{color:#7FA3C4}
+.jak .siatka{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,.16);margin-top:10px}
+.jak .pkt{padding:28px 26px 6px 0}
+.jak .pkt+.pkt{padding-left:26px;border-left:1px solid rgba(255,255,255,.16)}
+.jak h3{color:#fff;font-size:19px;margin-bottom:10px}
+.jak p{margin:0;font-size:16px}
+@media (max-width:1000px){.jak .siatka{grid-template-columns:1fr 1fr}.jak .pkt:nth-child(3){padding-left:0;border-left:0}.jak .pkt:nth-child(n+3){border-top:1px solid rgba(255,255,255,.16)}}
+@media (max-width:560px){.jak .siatka{grid-template-columns:1fr}.jak .pkt,.jak .pkt+.pkt{padding:22px 0 18px;border-left:0}.jak .pkt+.pkt{border-top:1px solid rgba(255,255,255,.16)}}
+/* kontakt */
+.kontakt .siatka{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,80px)}
+.dane{font-size:17px}
+.dane dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 22px}
+.dane dt{font:600 14px/1.9 Montserrat,sans-serif;color:#5D6773}
+.dane dd{margin:0;color:var(--graf);font-weight:600}
+.dane dd a{text-decoration:none;border-bottom:1.5px solid var(--niebo)}
+.dane .btn{background:var(--niebo);color:#fff;margin-top:30px}
+.dane .btn svg{color:#fff}
+.dane .btn:hover{background:var(--noc)}
+form{background:var(--szary);padding:clamp(22px,3vw,36px)}
+form h3{font-size:21px;margin-bottom:6px}
+form p.info{margin:0 0 18px;font-size:15px}
+.pola{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font:600 14px Montserrat,sans-serif;color:var(--graf)}
+input,textarea,select{display:block;width:100%;margin-top:6px;font:16px Manrope,sans-serif;padding:14px;border:1px solid #BCC6D0;border-radius:2px;background:#fff;color:var(--graf)}
+textarea{min-height:120px;resize:vertical}
+.cale{grid-column:1/-1}
+form .btn{background:var(--graf);color:#fff;border:0;cursor:pointer;margin-top:18px}
+form .btn svg{color:#fff}
+.mapa{margin-top:clamp(40px,6vw,70px);height:340px;background:var(--szary)}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+@media (max-width:860px){.kontakt .siatka{grid-template-columns:1fr}}
+@media (max-width:480px){.pola{grid-template-columns:1fr}}
+/* stopka */
+footer{background:var(--graf);color:#B8C1CA;padding:46px 0 30px;font-size:15px}
+footer .gorna{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:26px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .logo{color:#fff}
+footer .logo svg{color:#7FA3C4}
+footer h4{margin:0 0 10px;font:600 14px Montserrat,sans-serif;color:#fff}
+footer p{margin:0}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer .dolna{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:22px;font-size:14px}
+@media (max-width:760px){footer .gorna{grid-template-columns:1fr 1fr}footer .gorna>div:first-child{grid-column:1/-1}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(14,22,31,.94);display:none;align-items:center;justify-content:center;padding:60px 16px}
+.lb.on{display:flex}
+.lb img{max-width:min(1400px,100%);max-height:100%;object-fit:contain}
+.lb button{position:absolute;background:none;border:0;color:#fff;cursor:pointer;width:56px;height:56px;font:400 34px/1 Manrope,sans-serif}
+.lb .zamk{top:8px;right:8px}
+.lb .pop{left:4px;top:50%;transform:translateY(-50%)}
+.lb .nast{right:4px;top:50%;transform:translateY(-50%)}
+.lb p{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#fff;margin:0;font:600 15px Montserrat,sans-serif}
+.podglad{background:#17283A;color:#C9D4DF;text-align:center;font-size:13px;padding:8px 16px}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <symbol id="znakA" viewBox="0 0 100 92" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="miter"><path d="M4 88 50 4 96 88"/><path d="M15 88 50 24 85 88"/><path d="M26 88 50 44 74 88"/><path d="M37 88 50 64 63 88"/><path d="M33 75H67"/></symbol>
+  <symbol id="daszek" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 18 12 2 22 18"/><path d="M7 18 12 10 17 18"/></symbol>
+  <symbol id="strzalka" viewBox="0 0 22 18" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 9H19"/><path d="M12 2 19 9 12 16"/></symbol>
+ </defs>
+</svg>
+
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="logo" href="#start" aria-label="Agamar - strona główna"><svg aria-hidden="true"><use href="#znakA"/></svg><span><b>AGAMAR</b><small>POLI / GRAF</small></span></a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  <nav class="menu" id="menu">
+   <a href="#kim">Kim jestem</a>
+   <a href="#co">Co drukuję</a>
+   <a href="#realizacje">Realizacje</a>
+   <a href="#kontakt">Kontakt</a>
+   <a class="tel" href="tel:+48607922249">607 922 249</a>
+  </nav>
+ </div>
+</header>
+
+<main id="start">
+<section class="hero" style="padding:0">
+ <picture>
+  <source media="(max-width:700px)" type="image/webp" srcset="img/pakiet-tel-480.webp 480w, img/pakiet-tel-640.webp 640w" sizes="100vw">
+  <img src="img/pakiet-1024.webp" srcset="img/pakiet-640.webp 640w, img/pakiet-1024.webp 1024w, img/pakiet-1500.webp 1500w" sizes="100vw" width="1500" height="843" alt="Pakiet identyfikacji Agamar: papier firmowy, koperty, teczka, wizytówki i folder" fetchpriority="high">
+ </picture>
+ <div class="wrap">
+  <h1>Poligrafia dla firm i kancelarii w Warszawie - od wizytówki po teczkę do akt</h1>
+  <p class="lead">Projekt graficzny i dostawa do Państwa siedziby w cenie. Gotowe wyroby nawet w kilka godzin od akceptacji projektu.</p>
+  <div class="akcje">
+   <a class="btn" href="tel:+48607922249">Zadzwoń: 607 922 249 <svg aria-hidden="true"><use href="#strzalka"/></svg></a>
+   <span class="adres">Agamar - od 1978 r. - ul. Żelazna 74/2, Warszawa</span>
+  </div>
+ </div>
+</section>
+
+<section class="kim" id="kim">
+ <div class="wrap siatka">
+  <div>
+   <div class="naglowek"><svg class="warstwy" aria-hidden="true"><use href="#daszek"/></svg><h2>Jedna osoba od projektu do dostawy</h2></div>
+   <p>Agamar działa od 1978 roku. Projektuję i drukuję wszystko, co firma kładzie na biurku klienta: wizytówki, papier firmowy, koperty, teczki, notatniki i tabliczki przy drzwiach.</p>
+   <p>Pracuję dla wielu kancelarii prawnych i firm. Każde zlecenie prowadzę sam, więc rozmawiają Państwo z osobą, która projektuje, pilnuje druku i przywozi gotowe wyroby.</p>
+   <p>Jestem do Państwa dyspozycji w każdej chwili.</p>
+   <p class="podpis">Marek Przybyłowicz<span>Agamar - grafika i poligrafia</span></p>
+  </div>
+  <figure class="rogi">
+   <img src="img/molo-800.webp" srcset="img/molo-800.webp 800w, img/molo-1400.webp 1400w" sizes="(max-width:860px) 100vw, 45vw" width="1400" height="928" loading="lazy" alt="Molo w Sopocie - zdjęcie z okładki folderu Agamar">
+   <figcaption>Zdjęcie z okładki folderu Agamar - ten sam motyw na papierze firmowym i wizytówkach.</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="co" id="co">
+ <div class="wrap siatka">
+  <div class="opis">
+   <div class="naglowek"><svg class="warstwy" aria-hidden="true"><use href="#daszek"/></svg><h2>Co drukuję</h2></div>
+   <p>Od pojedynczej wizytówki po komplet materiałów na konferencję. Projekt graficzny przygotowuję w cenie zamówienia.</p>
+   <p>Nie wiedzą Państwo, od czego zacząć? Wystarczy telefon - dobierzemy papier, format i nakład.</p>
+  </div>
+  <ul class="lista">
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Identyfikacja wizualna<small>logo, papier firmowy, komplet materiałów</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Wizytówki<small>dla całego zespołu, w jednym stylu</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Teczki firmowe<small>na oferty i dokumenty dla klienta</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Teczki do akt<small>z polami sprawy, w kolorach kancelarii</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Koperty<small>z logo i danymi firmy</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Notatniki<small>w kratkę i linie, z logo</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Tabliczki informacyjne<small>przy drzwiach, w budynku, w recepcji</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Broszury i foldery<small>informacyjne, o firmie i usługach</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Konferencje i szkolenia<small>komplet materiałów poligraficznych</small></span></li>
+   <li><svg aria-hidden="true"><use href="#daszek"/></svg><span>Podkładki z klipsem<small>z nadrukiem firmy</small></span></li>
+  </ul>
+ </div>
+</section>
+
+<section class="real" id="realizacje">
+ <div class="wrap">
+  <div class="gora">
+   <div>
+    <div class="naglowek"><svg class="warstwy" aria-hidden="true"><use href="#daszek"/></svg><h2>Realizacje</h2></div>
+    <p>Wybrane prace dla kancelarii i firm. Kliknij zdjęcie, żeby je powiększyć.</p>
+   </div>
+   <div class="strz"><button type="button" id="wstecz" aria-label="Poprzednie"><svg style="transform:scaleX(-1)" aria-hidden="true"><use href="#strzalka"/></svg></button><button type="button" id="dalej" aria-label="Następne"><svg aria-hidden="true"><use href="#strzalka"/></svg></button></div>
+  </div>
+  <div class="tor" id="tor">
+   <figure class="karta"><button type="button" data-duze="img/teczki-do-akt-1400.webp" data-tytul="Teczki do akt"><img src="img/teczki-do-akt-720.webp" width="720" height="530" loading="lazy" decoding="async" alt="Teczki do akt - realizacje Agamar"></button><figcaption>Teczki do akt<span>dla kancelarii</span></figcaption></figure>
+<figure class="karta"><button type="button" data-duze="img/tabliczki-1400.webp" data-tytul="Tabliczki"><img src="img/tabliczki-720.webp" width="720" height="530" loading="lazy" decoding="async" alt="Tabliczki - realizacje Agamar"></button><figcaption>Tabliczki<span>przy drzwiach i w recepcji</span></figcaption></figure>
+<figure class="karta"><button type="button" data-duze="img/wizytowki-1400.webp" data-tytul="Wizytówki"><img src="img/wizytowki-720.webp" width="720" height="530" loading="lazy" decoding="async" alt="Wizytówki - realizacje Agamar"></button><figcaption>Wizytówki<span>firmy i kancelarie</span></figcaption></figure>
+<figure class="karta"><button type="button" data-duze="img/teczki-1400.webp" data-tytul="Teczki firmowe"><img src="img/teczki-720.webp" width="720" height="530" loading="lazy" decoding="async" alt="Teczki firmowe - realizacje Agamar"></button><figcaption>Teczki firmowe<span>oferty, dokumenty</span></figcaption></figure>
+<figure class="karta"><button type="button" data-duze="img/broszury-1400.webp" data-tytul="Broszury i podkładki"><img src="img/broszury-720.webp" width="720" height="530" loading="lazy" decoding="async" alt="Broszury i podkładki - realizacje Agamar"></button><figcaption>Broszury i podkładki<span>z klipsem</span></figcaption></figure>
+<figure class="karta"><button type="button" data-duze="img/notatniki-1400.webp" data-tytul="Notatniki"><img src="img/notatniki-720.webp" width="720" height="530" loading="lazy" decoding="async" alt="Notatniki - realizacje Agamar"></button><figcaption>Notatniki<span>kratka i linie</span></figcaption></figure>
+<figure class="karta"><button type="button" data-duze="img/koperty-1400.webp" data-tytul="Koperty"><img src="img/koperty-720.webp" width="720" height="530" loading="lazy" decoding="async" alt="Koperty - realizacje Agamar"></button><figcaption>Koperty<span>z logo i danymi</span></figcaption></figure>
+
+  </div>
+  <div class="pasek" aria-hidden="true"><i id="pasek"></i></div>
+ </div>
+</section>
+
+<section class="jak">
+ <div class="wrap">
+  <div class="naglowek"><svg class="warstwy" aria-hidden="true"><use href="#daszek"/></svg><h2>Jak pracuję</h2></div>
+  <div class="siatka">
+   <div class="pkt"><h3>Projekt w cenie</h3><p>Projekt graficzny każdego zamawianego wyrobu przygotowuję bez dodatkowej opłaty.</p></div>
+   <div class="pkt"><h3>Szybko</h3><p>Gotowe wyroby nawet w kilka godzin od akceptacji projektu.</p></div>
+   <div class="pkt"><h3>Dostawa w cenie</h3><p>Przywożę zamówienie do siedziby Państwa firmy.</p></div>
+   <div class="pkt"><h3>Konferencje</h3><p>Komplet materiałów na konferencję lub szkolenie z jednego miejsca.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+ <div class="wrap">
+  <div class="siatka">
+   <div class="dane">
+    <div class="naglowek"><svg class="warstwy" aria-hidden="true"><use href="#daszek"/></svg><h2>Kontakt</h2></div>
+    <dl>
+     <dt>Telefon</dt><dd><a href="tel:+48607922249">+48 607 922 249</a></dd>
+     <dt>E-mail</dt><dd><a href="mailto:agamar@agamar.pl">agamar@agamar.pl</a></dd>
+     <dt>Adres</dt><dd>ul. Żelazna 74/2<br>00-894 Warszawa</dd>
+     <dt>Firma</dt><dd>Agamar - Marek Przybyłowicz<br>NIP 1180068157</dd>
+    </dl>
+    <a class="btn" href="tel:+48607922249">Zadzwoń: 607 922 249 <svg aria-hidden="true"><use href="#strzalka"/></svg></a>
+   </div>
+   <form onsubmit="event.preventDefault();this.querySelector('.info').textContent='To formularz pokazowy w podglądzie - na docelowej stronie wiadomość trafi na agamar@agamar.pl.'">
+    <h3>Zapytanie o wycenę</h3>
+    <p class="info">Proszę napisać, co i w jakim nakładzie - odpowiem z wyceną.</p>
+    <div class="pola">
+     <label>Imię i nazwisko<input name="imie" autocomplete="name"></label>
+     <label>Telefon lub e-mail<input name="kontakt" autocomplete="email"></label>
+     <label class="cale">Co drukujemy?<select name="co"><option>Wizytówki</option><option>Teczki firmowe</option><option>Teczki do akt</option><option>Koperty / papier firmowy</option><option>Notatniki</option><option>Tabliczki</option><option>Broszury, foldery</option><option>Konferencja / szkolenie</option><option>Inne</option></select></label>
+     <label class="cale">Wiadomość<textarea name="wiadomosc" placeholder="np. 500 wizytówek dla 4 osób, papier jak dotychczas"></textarea></label>
+    </div>
+    <button class="btn" type="submit">Wyślij zapytanie <svg aria-hidden="true"><use href="#strzalka"/></svg></button>
+   </form>
+  </div>
+  <div class="mapa" id="mapa" data-src="https://www.google.com/maps?q=%C5%BBelazna+74,+00-894+Warszawa&amp;output=embed" aria-label="Mapa dojazdu: ul. Żelazna 74, Warszawa"></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="gorna">
+   <div><a class="logo" href="#start"><svg aria-hidden="true"><use href="#znakA"/></svg><span><b>AGAMAR</b><small>POLI / GRAF</small></span></a><p style="margin-top:14px;max-width:34ch">Grafika i poligrafia dla firm i kancelarii. Od 1978 roku.</p></div>
+   <div><h4>Kontakt</h4><p><a href="tel:+48607922249">+48 607 922 249</a><br><a href="mailto:agamar@agamar.pl">agamar@agamar.pl</a></p></div>
+   <div><h4>Adres</h4><p>ul. Żelazna 74/2<br>00-894 Warszawa<br>NIP 1180068157</p></div>
+  </div>
+  <div class="dolna"><span>© 1978-2026 Agamar - Marek Przybyłowicz</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=agamar.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+<div class="podglad">Podgląd koncepcji nowej strony agamar.pl - przygotowany na obecnych treściach i zdjęciach.</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie"><button class="zamk" aria-label="Zamknij">×</button><button class="pop" aria-label="Poprzednie">‹</button><img alt=""><button class="nast" aria-label="Następne">›</button><p></p></div>
+
+<script>
+(function(){
+var top=document.getElementById('top'),menu=document.getElementById('menu'),bg=document.getElementById('burger');
+function sc(){top.classList.toggle('ciemny',scrollY>40)}sc();addEventListener('scroll',sc,{passive:true});
+bg.addEventListener('click',function(){var o=menu.classList.toggle('otwarte');top.classList.toggle('menu-on',o);bg.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',function(e){if(e.target.tagName=='A'){menu.classList.remove('otwarte');top.classList.remove('menu-on');bg.setAttribute('aria-expanded',false)}});
+var tor=document.getElementById('tor'),pas=document.getElementById('pasek');
+function krok(){var k=tor.querySelector('.karta');return k?k.getBoundingClientRect().width+22:300}
+document.getElementById('dalej').onclick=function(){tor.scrollBy({left:krok(),behavior:'smooth'})};
+document.getElementById('wstecz').onclick=function(){tor.scrollBy({left:-krok(),behavior:'smooth'})};
+function upd(){var m=tor.scrollWidth-tor.clientWidth,w=tor.clientWidth/tor.scrollWidth*100;pas.style.width=w+'%';pas.style.left=(m>0?tor.scrollLeft/m*(100-w):0)+'%'}
+tor.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+var dn=false,sx=0,sl=0,mv=0;
+tor.addEventListener('pointerdown',function(e){if(e.pointerType!='mouse')return;dn=true;mv=0;sx=e.clientX;sl=tor.scrollLeft});
+addEventListener('pointermove',function(e){if(!dn)return;var d=e.clientX-sx;if(Math.abs(d)>5){mv=1;tor.classList.add('ciag')}tor.scrollLeft=sl-d});
+addEventListener('pointerup',function(){if(!dn)return;dn=false;setTimeout(function(){tor.classList.remove('ciag')},0)});
+var lb=document.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p'),k=[].slice.call(tor.querySelectorAll('.karta button')),ix=0;
+function pokaz(i){ix=(i+k.length)%k.length;li.src=k[ix].dataset.duze;li.alt=k[ix].querySelector('img').alt;lp.textContent=k[ix].dataset.tytul;lb.classList.add('on')}
+k.forEach(function(b,i){b.addEventListener('click',function(e){if(mv){e.preventDefault();return}pokaz(i)})});
+lb.querySelector('.zamk').onclick=function(){lb.classList.remove('on')};
+lb.querySelector('.pop').onclick=function(){pokaz(ix-1)};lb.querySelector('.nast').onclick=function(){pokaz(ix+1)};
+lb.addEventListener('click',function(e){if(e.target==lb)lb.classList.remove('on')});
+addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key=='Escape')lb.classList.remove('on');if(e.key=='ArrowRight')pokaz(ix+1);if(e.key=='ArrowLeft')pokaz(ix-1)});
+var mp=document.getElementById('mapa');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){mp.innerHTML='<iframe title="Mapa: ul. Żelazna 74, Warszawa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+mp.dataset.src+'"></iframe>';io.disconnect()}},{rootMargin:'300px'});io.observe(mp)}
+})();
+</script>
+</body>
+</html>
